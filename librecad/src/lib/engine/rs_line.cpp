@@ -596,6 +596,14 @@ void RS_Line::draw(RS_Painter* painter, RS_GraphicView* view, double& patternOff
 
     RS_Vector pStart(view->toGui(endPoints.at(0)));
     RS_Vector pEnd(view->toGui(endPoints.at(1)));
+    double styleFactor = getStyleFactor(view);
+    std::cout<<"styleFactor="<<styleFactor<<std::endl;
+    if (styleFactor<0.0) {
+        painter->drawLine(pStart,
+                          pEnd
+                          );
+        return;
+    }
     //    std::cout<<"draw line: "<<pStart<<" to "<<pEnd<<std::endl;
     RS_Vector direction=pEnd-pStart;
     if(isHelpLayer(true) && direction.squared() > RS_TOLERANCE){
@@ -679,7 +687,7 @@ void RS_Line::draw(RS_Painter* painter, RS_GraphicView* view, double& patternOff
     RS_Vector* dp=new RS_Vector[pat->num > 0?pat->num:0];
     double* ds=new double[pat->num > 0?pat->num:0];
     if (pat->num >0 ){
-        double dpmm=static_cast<RS_PainterQt*>(painter)->getDpmm();
+        double dpmm=static_cast<RS_PainterQt*>(painter)->getDpmm()*styleFactor;
         for (i=0; i<pat->num; ++i) {
             //        ds[j]=pat->pattern[i] * styleFactor;
             //fixme, styleFactor support needed
