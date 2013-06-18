@@ -199,8 +199,7 @@ HEADERS += \
     lib/scripting/rs_python_wrappers.h \
     lib/scripting/rs_script.h \
     lib/scripting/rs_scriptlist.h \
-    ui/forms/qg_snaptoolbar.h \
-    actions/rs_actiondrawflower.h
+    ui/forms/qg_snaptoolbar.h
 
 SOURCES += \
     lib/actions/rs_actioninterface.cpp \
@@ -280,8 +279,7 @@ SOURCES += \
     lib/scripting/rs_python_wrappers.cpp \
     lib/scripting/rs_script.cpp \
     lib/scripting/rs_scriptlist.cpp \
-    ui/forms/qg_snaptoolbar.cpp \
-    actions/rs_actiondrawflower.cpp
+    ui/forms/qg_snaptoolbar.cpp
 
 # ################################################################################
 # Command

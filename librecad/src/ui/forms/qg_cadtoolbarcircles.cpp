@@ -138,11 +138,6 @@ void QG_CadToolBarCircles::drawCircleTan3() {
         actionHandler->slotDrawCircleTan3();
     }
 }
-void QG_CadToolBarCircles::drawFlower() {
-    if (cadToolBar!=NULL && actionHandler!=NULL) {
-        actionHandler->slotDrawFlower();
-    }
-}
 void QG_CadToolBarCircles::back() {
     if (cadToolBar!=NULL) {
         cadToolBar->back();
@@ -192,10 +187,6 @@ void QG_CadToolBarCircles::restoreAction()
         actionHandler->slotDrawCircleTan1_2P();
         return;
     }
-    if ( bFlower ->isChecked() ) {
-        actionHandler->slotDrawFlower();
-        return;
-    }
     //clear all action
     bHidden->setChecked(true);
     RS_ActionInterface* currentAction =actionHandler->getCurrentAction();
@@ -243,9 +234,6 @@ void QG_CadToolBarCircles::showCadToolBar(RS2::ActionType actionType){
         return;
     case RS2::ActionDrawCircleTan2_1P:
         bCircleTan2_1P->setChecked(true);
-        return;
-    case RS2::ActionDrawFlower:
-        bFlower->setChecked(true);
         return;
     default:
         bHidden->setChecked(true);

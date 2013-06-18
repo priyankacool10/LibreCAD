@@ -256,7 +256,6 @@ public:
         ActionDrawCircleTan1_2P,
         ActionDrawCircleTan2,
         ActionDrawCircleTan3,
-        ActionDrawFlower,
 
         ActionDrawEllipseArcAxis,
         ActionDrawEllipseAxis,

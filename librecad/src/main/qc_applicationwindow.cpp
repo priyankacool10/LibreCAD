@@ -1045,9 +1045,6 @@ void QC_ApplicationWindow::initActions(void)
     action = actionFactory.createAction(RS2::ActionDrawCircleTan1_2P, actionHandler);
     subMenu->addAction(action);
     connect(this, SIGNAL(windowsChanged(bool)), action, SLOT(setEnabled(bool)));
-    action = actionFactory.createAction(RS2::ActionDrawFlower, actionHandler);
-    subMenu->addAction(action);
-    connect(this, SIGNAL(windowsChanged(bool)), action, SLOT(setEnabled(bool)));
     // Ellipses:
     subMenu= menu->addMenu(tr("&Ellipse"));
     subMenu->setObjectName("Ellipse");

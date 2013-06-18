@@ -49,7 +49,6 @@
 #include "rs_actiondrawarc3p.h"
 #include "rs_actiondrawarctangential.h"
 #include "rs_actiondrawcircle.h"
-#include "rs_actiondrawflower.h"
 #include "rs_actiondrawcircle2p.h"
 #include "rs_actiondrawcircle3p.h"
 #include "rs_actiondrawcirclecr.h"
@@ -662,11 +661,7 @@ QAction* QG_ActionFactory::createAction(	RS2::ActionType id, QObject* obj,
         connect(action, SIGNAL(triggered()),
                 obj, SLOT(slotDrawCircle()));
         break;
-    case RS2::ActionDrawFlower:
-                action = RS_ActionDrawFlower::createGUIAction(id, mw);
-        connect(action, SIGNAL(triggered()),
-                obj, SLOT(slotDrawFlower()));
-        break;
+
     case RS2::ActionDrawCircleCR:
                 action = RS_ActionDrawCircleCR::createGUIAction(id, mw);
                 /*
