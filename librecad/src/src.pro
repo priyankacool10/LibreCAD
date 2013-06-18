@@ -318,6 +318,7 @@ HEADERS += actions/rs_actionblocksadd.h \
     actions/rs_actiondrawcircletan2_1p.h \
     actions/rs_actiondrawcircletan2.h \
     actions/rs_actiondrawcircletan3.h \
+    actions/rs_actiondrawflower.h \
     actions/rs_actiondrawellipseaxis.h \
     actions/rs_actiondrawellipsefocipoint.h \
     actions/rs_actiondrawellipse4points.h \
@@ -450,6 +451,7 @@ SOURCES += actions/rs_actionblocksadd.cpp \
     actions/rs_actiondrawcircletan2_1p.cpp \
     actions/rs_actiondrawcircletan2.cpp \
     actions/rs_actiondrawcircletan3.cpp \
+    actions/rs_actiondrawflower.cpp \
     actions/rs_actiondrawellipseaxis.cpp \
     actions/rs_actiondrawellipsefocipoint.cpp \
     actions/rs_actiondrawellipse4points.cpp \
