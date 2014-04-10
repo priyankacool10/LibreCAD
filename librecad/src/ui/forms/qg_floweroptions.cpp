@@ -3,7 +3,7 @@
 ** This file is part of the LibreCAD project, a 2D CAD program
 **
 ** Copyright (C) 2010 R. van Twisk (librecad@rvt.dds.nl)
-** Copyright (C) 2001-2003 RibbonSoft. All rights reserved.
+** Copyright (C) 2014 Priyanka Kapoor (anjalicool.kapoor444@gmail.com)
 **
 **
 ** This file may be distributed and/or modified under the terms of the
