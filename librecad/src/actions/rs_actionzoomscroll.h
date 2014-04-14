@@ -53,6 +53,7 @@ public:
     virtual void commandEvent(RS_CommandEvent* e);
     virtual void coordinateEvent(RS_CoordinateEvent* e);
     virtual void updateMouseButtonHints();
+    virtual void mouseMoveEvent(QMouseEvent* e);
     virtual void mouseReleaseEvent(QMouseEvent* /*e*/);
 
 protected:

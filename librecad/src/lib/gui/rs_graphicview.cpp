@@ -985,11 +985,12 @@ void RS_GraphicView::zoomScroll(RS2::Direction direction) {
  * Scrolls to a given coordinate.
  * @author: Priyanka Kapoor
  */
-void RS_GraphicView::zoomScroll(RS_Vector point) {
+void RS_GraphicView::zoomScroll(const RS_Vector& point) {
 	
-    RS_Vector c = toGui(point);
-    centerX(c.x);
-    centerY(c.y);
+//    centerX(c.x);
+    offsetX=(int)( (getWidth() - borderLeft - borderRight)*0.5 - factor.x*point.x);
+//    centerY(c.y);
+    offsetY=(int)( (getHeight() + borderTop + borderBottom)*0.5 - factor.y*point.y);
     adjustOffsetControls();
     adjustZoomControls();
     redraw();

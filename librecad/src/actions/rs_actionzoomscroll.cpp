@@ -72,6 +72,16 @@ void RS_ActionZoomScroll::updateMouseButtonHints()
 }
 
 
+void RS_ActionZoomScroll::mouseMoveEvent(QMouseEvent* e) {
+    //    RS_DEBUG->print("RS_ActionDrawLine::mouseMoveEvent begin");
+
+    //    RS_DEBUG->print("RS_ActionDrawLine::mouseMoveEvent: snap point");
+    snapPoint(e);
+
+    //    RS_DEBUG->print("RS_ActionDrawLine::mouseMoveEvent end");
+}
+
+
 
 void RS_ActionZoomScroll::mouseReleaseEvent(QMouseEvent* e) {
     if (e->button()==Qt::LeftButton) {
