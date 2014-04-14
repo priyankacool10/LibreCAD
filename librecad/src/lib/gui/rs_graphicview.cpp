@@ -982,6 +982,22 @@ void RS_GraphicView::zoomScroll(RS2::Direction direction) {
 
 
 /**
+ * Scrolls to a given coordinate.
+ * @author: Priyanka Kapoor
+ */
+void RS_GraphicView::zoomScroll(RS_Vector point) {
+	
+    RS_Vector c = toGui(point);
+    centerX(c.x);
+    centerY(c.y);
+    adjustOffsetControls();
+    adjustZoomControls();
+    redraw();
+}
+
+
+
+/**
  * Zooms to page extends.
  */
 void RS_GraphicView::zoomPage() {
