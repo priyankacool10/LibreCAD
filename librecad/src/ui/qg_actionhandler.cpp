@@ -405,7 +405,7 @@ RS_ActionInterface* QG_ActionHandler::setCurrentAction(RS2::ActionType id) {
         a = new RS_ActionZoomRedraw(*doc, *gv);
         break;
     case RS2::ActionZoomScroll:
-    	a = new RS_ActionScroll(RS2::Up, *doc, *gv, RS_Vector(false));
+        a = new RS_ActionZoomScroll(RS2::Up, *doc, *gv, RS_Vector(false));
     	break;
 
         // Drawing actions:
